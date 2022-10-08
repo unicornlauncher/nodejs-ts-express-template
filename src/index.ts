@@ -1,5 +1,5 @@
 import http from 'http';
-import ExpressAppFactory from './express';
+import ExpressAppFactory from './presentation/express';
 
 const PORT = Number(process.env.PORT) || 3000;
 const app = ExpressAppFactory.createApp();
