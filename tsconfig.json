@@ -1,7 +1,7 @@
 {
   "extends": "@tsconfig/node16/tsconfig.json",
-  "include": ["src", "test/mocks/express"],
-  "exclude": ["node_modules", "src/**/*.spec.ts", "src/__mocks__/"],
+  "include": ["src"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"],
   "compilerOptions": {
     "outDir": "dist",
     "noImplicitAny": false
