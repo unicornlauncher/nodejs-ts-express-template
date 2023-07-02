@@ -1,7 +1,11 @@
 import { type Request, type Response } from 'express';
 import type ApplicationState from '../../presentation/application-state';
 
-export interface ApplicationEnv { NODE_ENV: string; NODE_VERSION: string; COMMIT_SHA: string }
+export interface ApplicationEnv {
+  NODE_ENV: string;
+  NODE_VERSION: string;
+  COMMIT_SHA: string;
+}
 export interface HealthCheckControllerProps {
   env: ApplicationEnv;
   applicationState: ApplicationState;
@@ -18,9 +22,10 @@ export default class HealthCheckController {
     this.getHealthState = this.getHealthState.bind(this);
   }
 
-  getHealthState(_: Request, res: Response) {
-    if (!this.appState.isReady())
+  getHealthState(_: Request, res: Response): Response {
+    if (!this.appState.isReady()) {
       return res.status(503).json({ msg: 'Service temporarily unavailable' });
+    }
 
     return res.json({
       ready: true,

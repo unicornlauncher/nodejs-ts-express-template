@@ -1,7 +1,11 @@
 import http from 'http';
-import ExpressAppFactory from './presentation/express';
+import * as ExpressAppFactory from './presentation/express';
 
-const PORT = Number(process.env.PORT) || 3000;
+const port = Number(process.env.PORT);
+const PORT = [NaN, undefined, null].includes(port) ? 3000 : port;
+
 const app = ExpressAppFactory.createApp();
 
-http.createServer(app).listen(PORT, () => { console.log(`server listening at ${PORT} 🚀`); });
+http.createServer(app).listen(PORT, () => {
+  console.log(`server listening at ${PORT} 🚀`);
+});
