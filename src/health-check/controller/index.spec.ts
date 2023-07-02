@@ -1,6 +1,6 @@
 import HealthCheckController from '.';
-import FakeApplicationState from '../../../application-state/fake';
-import FakeExpressFactory from '../../../../__mocks__/express/factory';
+import FakeApplicationState from '../../presentation/application-state/fake';
+import FakeExpressFactory from '../../__mocks__/express/factory';
 
 describe('HealthCheckController', () => {
   describe('getHealthState', () => {

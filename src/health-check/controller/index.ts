@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import ApplicationState from '../../../application-state';
+import ApplicationState from '../../presentation/application-state';
 
 export type ApplicationEnv = { NODE_ENV: string; NODE_VERSION: string; COMMIT_SHA: string };
 export type HealthCheckControllerProps = {
