@@ -1,4 +1,4 @@
-[![Continuous Integration](https://github.com/kaiosilveira/nodejs-ts-express-template/actions/workflows/ci.yml/badge.svg)](https://github.com/kaiosilveira/nodejs-ts-express-template/actions/workflows/ci.yml)
+[![Continuous Integration](https://github.com/unicornlauncher/nodejs-ts-express-template/actions/workflows/ci.yml/badge.svg)](https://github.com/unicornlauncher/nodejs-ts-express-template/actions/workflows/ci.yml)
 
 # nodejs + ts + express template
 
