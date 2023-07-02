@@ -1,4 +1,4 @@
-import ApplicationState from '..';
+import type ApplicationState from '..';
 
 export default class InMemoryApplicationState implements ApplicationState {
   private _isReady: boolean;

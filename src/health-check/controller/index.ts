@@ -1,11 +1,11 @@
-import { Request, Response } from 'express';
-import ApplicationState from '../../presentation/application-state';
+import { type Request, type Response } from 'express';
+import type ApplicationState from '../../presentation/application-state';
 
-export type ApplicationEnv = { NODE_ENV: string; NODE_VERSION: string; COMMIT_SHA: string };
-export type HealthCheckControllerProps = {
+export interface ApplicationEnv { NODE_ENV: string; NODE_VERSION: string; COMMIT_SHA: string }
+export interface HealthCheckControllerProps {
   env: ApplicationEnv;
   applicationState: ApplicationState;
-};
+}
 
 export default class HealthCheckController {
   private readonly appState: ApplicationState;

@@ -1,6 +1,6 @@
-import { Router } from 'express';
+import { type Router } from 'express';
 import InMemoryApplicationState from '../application-state/in-memory';
-import HealthCheckController, { ApplicationEnv } from '../../health-check/controller';
+import HealthCheckController, { type ApplicationEnv } from '../../health-check/controller';
 
 export default class PresentationResourcesManager {
   static configureRouter(router: Router) {
